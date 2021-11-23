@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  width: 80rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette pattrick pattrick kira";
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+}
+
+.danielcard {
+  grid-area: daniel;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 5rem;
+}
+
+.jonathancard {
+  grid-area: jonathan;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.jeanettecard {
+  grid-area: jeanette;
+  background-color: #fff;
+}
+
+.pattrickcard {
+  grid-area: pattrick;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.kiracard {
+  grid-area: kira;
+  background-color: #fff;
+}
+
+.profilehead {
+  display: flex;
+  align-items: center;
+}
+
+.profileimage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.profileimage img {
+  height: 100%;
+  width: 100%;
+}
+
+.profilename h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profilename small {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.jeanettecard .profilehead .profilename h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.jeanettecard .profilehead .profilename small {
+  color: hsl(217, 19%, 35%, 0.7);
+}
+
+.kiracard .profilehead .profilename h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.kiracard .profilehead .profilename small {
+  color: hsl(217, 19%, 35%, 0.7);
+}
+
+.card > h2 {
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1.3rem;
+}
+
+.jeanettecard h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.jeanettecard p {
+  color: hsl(217, 19%, 35%, 0.7);
+}
+
+.kiracard h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.kiracard p {
+  color: hsl(217, 19%, 35%, 0.7);
+}
+
+@media (max-width: 800px) {
+  body {
+    min-height: 100vh;
+  }
+  main {
+    margin-block: 2rem;
+    width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "pattrick"
+      "kira";
+  }
+
+  .danielcard {
+    background-position: top right 2rem;
+  }
+}
